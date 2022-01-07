@@ -1,0 +1,28 @@
+body {
+  margin: 0%;
+  color: #926239;
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url("../images/topography.svg"),
+    linear-gradient(110deg, #f93d66, #6d47d9);
+  background-size: 340px, auto;
+  min-height: calc(100vh - 100px);
+  margin: 50px;
+  /* background: white; */
+  background-attachment: fixed;
+  letter-spacing: -1px;
+}
+
+section {
+  width: 99%;
+  margin: auto;
+}
+button{
+  padding: 12px 26px 12px 26px;
+  background-color: #ffc600;
+  border: none;
+  border-radius: 3px;
+}
+.taco{
+ background-image: url(../images/taco.jpg);
+ margin-top: 17%;
+}
