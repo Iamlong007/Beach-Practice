@@ -16,13 +16,125 @@ section {
   width: 99%;
   margin: auto;
 }
-button{
+.cont {
+  display: grid;
+  grid-gap: 20px;
+}
+button {
   padding: 12px 26px 12px 26px;
   background-color: #ffc600;
   border: none;
   border-radius: 3px;
 }
-.taco{
- background-image: url(../images/taco.jpg);
- margin-top: 17%;
+.top {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-areas:
+    "taco"
+    "p1"
+    "p2";
+}
+
+@media (min-width: 700px) {
+  .top {
+    grid-template-areas:
+      "taco taco p1"
+      "taco taco p2";
+  }
+  .about {
+    grid-template-columns: 400px 1fr;
+  }
+  .gallery {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+.taco {
+  background-image: url(../images/taco.jpg);
+  background-size: cover;
+  min-height: 300px;
+  background-position: bottom right;
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+  align-items: start;
+  justify-content: center;
+  grid-area: taco;
+}
+h1,
+p {
+  background-color: #ffc600;
+  color: black;
+  padding: 5px;
+  text-align: center;
+}
+.p1 {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  background-color: #ffc600;
+  grid-area: p1;
+}
+.p2 {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  background-color: #ffc600;
+  grid-area: p2;
+}
+.features {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+.feature {
+  background: white;
+  padding: 10px;
+  border: 1px solid white;
+  text-align: center;
+  box-shadow: 0 0 4px rgb(0 0 0 / 10%);
+}
+.icon {
+  font-size: 50px;
+}
+.pp {
+  background-color: white;
+  color: black;
+  padding: 5px;
+  text-align: center;
+}
+h3 {
+  margin: 0px;
+}
+.about {
+  background: white;
+  padding: 50px;
+  display: grid;
+  align-items: center;
+}
+img {
+  max-width: 100%;
+}
+.f1 {
+  text-align: left;
+  background-color: white;
+  margin-top: 0px;
+}
+.gallery {
+  display: grid;
+  grid-gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+h2 {
+  text-align: center;
+  color: black;
+  grid-column: 1 / -1;
+  display: grid;
+  grid-gap: 20px;
+  align-items: center;
+  justify-content: center;
 }
